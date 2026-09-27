@@ -1,0 +1,47 @@
+# Source only. Everything this repo generates or downloads is reproducible from
+# the numbered scripts, so none of it belongs in git.
+#
+# NOTE: leading slashes matter. A bare `data/` would also match
+# `src/sr_seg/data/`, silently dropping three source modules.
+
+# Generated trees (root-relative)
+/data/
+/runs/
+/results/
+/logs/
+/cache/
+
+# Working notes and writeups -- kept local, not shipped with the source
+/docs/
+
+# Vendored third-party source, copied by env/create_env.sh
+/third_party/
+
+# Cluster job scripts: site-specific, and carry allocation/user paths
+/slurm/
+
+# Model weights and other large binaries
+*.ckpt
+*.pth
+*.pt
+*.npy
+*.tif
+*.tiff
+*.gpkg
+*.parquet
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Editors / OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
